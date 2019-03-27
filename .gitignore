@@ -1,0 +1,9 @@
+*.tex
+auto/
+*~
+*.aux
+*.bbl
+*.blg
+*.log
+*.pdf
+.RData
