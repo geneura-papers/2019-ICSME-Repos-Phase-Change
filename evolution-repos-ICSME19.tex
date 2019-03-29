@@ -33,29 +33,32 @@
 \maketitle
 
 \begin{abstract}
-  Software development using control systems is one of the main ways
-  of creation in our days.  Traditionally, the study of the evolution
+Software nowadays is almost exclusively developed using source control systems. Traditionally, the study of the evolution
   of this type of systems is usually done from the perspective of
   self-organized complex systems, since the version-control tools used
-  allow a development oriented to the community without a fixed
-  leader.
+  allow a community-oriented development without a fixed or appointed
+  leader. Understanding if and how a software development team
+  self-organizes might give hints on how to improve productivity,
+  reduce bugs or, in the case of open source systems based on
+  volunteer woor, reduce churn and increase engagement.
 
-  One of the essential characteristics needed to understand this type
+  However, one of the essential characteristics needed to understand this type
   of systems' behaviour and to know if we are truly dealing with an
   auto-organized community is the appearance or not of a power law in
-  the events'distributions (in this case, events are understood as
-  commits, that is, additions to the code by users).
+  the events' size distributions.
+  % (in this case, events are understood as  commits, that is, additions to the code by users).
+  % - This is our choice and should be presented that way. Other people might use a different thing, like file size, author interactions or whatever - JJ
 
-  But we have to be extremely cautious with this kind of approach.
-  
-  The existence or not of this type of distributions should be always
+  But we have to be extremely cautious with this kind of approach,
+  because the existence or not of this type of distributions should be
+  always 
   analyzed mathematically to minimize posible sources of bias.
-  Thankfully we can use the concept of hypothesis tests for that
+  We will use the concept of hypothesis tests for that
   purpose, that is, checking what is the likelihood that our data
-  follow the distribution of power law instead of some other with
+  follows a  power law distribution  instead of some other with
   similar characteristics.
 
-  However, the conclusions of these tests may not shed light on
+  The conclusions of these tests may not shed light on
   whether we are in a state of self-organization.  Software
   development is a process that evolves over time and analysis at a
   specific moment is not significant.  Our approach in this work uses
@@ -71,7 +74,6 @@
   present power law distributions) or, if they have done so, but due
   to other code insertions and to the temporary nature of the creative
   process, this self-organized state has been altered.
-  
 
 \end{abstract}
 
