@@ -1,0 +1,126 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{url} 
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Temporal Evolution In Commit Size Distribution\\
+	\thanks{----}
+}
+
+\author{\IEEEauthorblockN{-}
+	\IEEEauthorblockA{-}
+	\and
+	\IEEEauthorblockN{-}
+	\IEEEauthorblockA{-}
+}
+
+\maketitle
+
+\begin{abstract}
+  Software nowadays is almost exclusively developed using source
+  control systems. Traditionally, the study of the evolution of this
+  type of systems is usually done from the perspective of
+  self-organized complex systems, since the version-control tools used
+  allow a community-oriented development without a fixed or appointed
+  leader. Understanding if and how a software development team
+  self-organizes might give hints on how to improve productivity,
+  reduce bugs or, in the case of open source systems based on
+  volunteer woor, reduce churn and increase engagement.
+
+  However, one of the essential characteristics needed to understand
+  this type of systems' behaviour and to know if we are truly dealing
+  with an auto-organized community is the appearance or not of a power
+  law in the events' size distributions.  In this case, we have chosen
+  to treat commits as our events, that is, additions to the code by
+  users.
+  % - This is our choice and should be presented that way. Other
+  % people might use a different thing, like file size, author
+  % interactions or whatever - JJ
+
+  But we have to be extremely cautious with this kind of approach,
+  because the existence or not of this type of distributions should be
+  always analyzed mathematically to minimize posible sources of bias.
+  We will use the concept of hypothesis tests for that purpose, that
+  is, checking what is the likelihood that our data follows a power
+  law distribution instead of some other with similar characteristics.
+
+  The conclusions of these tests may not shed light on whether we are
+  in a state of self-organization.  Software development is a process
+  that evolves over time and analysis at a specific moment is not
+  significant.  Our approach in this work uses a temporal analysis
+  over the evolution of commit's distribution in software
+  projects. For that, we have selected a set of repositories that
+  exhibit singular behaviors such as a large number of contributions
+  versus few or inconclusive results in statistical tests.
+
+  Our study seeks to provide conclusive evidence about the state of
+  the chosen repositories, answering wether they have not reached a
+  state of self-organization in all its evolution (that is, never
+  present power law distributions) or, if they have done so, but due
+  to other code insertions and to the temporary nature of the creative
+  process, this self-organized state has been altered.
+
+  
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+	Complex systems, self-organizing systems, self-organized criticality, power laws, software development, 
+	software repositories
+\end{IEEEkeywords}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   INTRODUCTION   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}\label{introduction}
+. 
+
+% --------------------------------------------------------
+
+
+\section{State of the art}\label{soa}
+
+
+
+% --------------------------------------------------------
+
+
+\section{Methodology}
+\label{sec:method}
+
+
+\subsection{Hypothesis tests}
+
+
+
+\subsection{Classification}
+
+\subsection{Visualization}
+
+
+
+% --------------------------------------------------------
+
+
+\section{Results}
+\label{res}
+
+
+% --------------------------------------------------------
+
+
+\section{Conclusions}\label{conc}
+
+
+\bibliographystyle{apalike}
+\bibliography{biblio}
+
+\end{document}
