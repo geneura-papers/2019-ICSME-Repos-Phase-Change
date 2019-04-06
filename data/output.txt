@@ -1,0 +1,340 @@
+------------------------------
+Summary of  cask  from 0 to  181
+Estimated value of alpha parameter:  1.436097515714274
+Estimated first value where powerlaw is exposed:  1.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.03384773160808594
+Comparative between powerlaw and lognormal
+-3.1132570554493055 0.001850347790177144
+Comparative between powerlaw and exponential
+2.2433117717663884 0.024876716793795123
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-2.0915476341254027 3.836675490465069e-05
+Comparative between truncated powerlaw and lognormal positive 
+-1.4486550827843314 0.14743393017568643 
+
+------------------------------
+Summary of  cask  from 0 to  363
+Estimated value of alpha parameter:  1.5972341451041505
+Estimated first value where powerlaw is exposed:  5.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.04514665778348132
+Comparative between powerlaw and lognormal
+-0.3413163532478914 0.7328654381849964
+Comparative between powerlaw and exponential
+13.211997971843491 7.481197231626292e-40
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-2.0783765791935416 0.15850930472613278
+Comparative between truncated powerlaw and lognormal positive 
+2.0996908976378506 0.03575604081893567 
+
+
+------------------------------
+Summary of  cask  from 0 to  544
+Estimated value of alpha parameter:  1.6543328989680424
+Estimated first value where powerlaw is exposed:  13.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.04836967972025464
+Comparative between powerlaw and lognormal
+-0.5180726186073895 0.6044076036370727
+Comparative between powerlaw and exponential
+11.250260003552004 2.3091037415009936e-29
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-2.073604670821284 0.06894698469127425
+Comparative between truncated powerlaw and lognormal positive 
+2.544400880265161 0.010946537447352031 
+
+
+------------------------------
+Summary of  cask  from 0 to  726
+Estimated value of alpha parameter:  1.6368444327973002
+Estimated first value where powerlaw is exposed:  13.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.040038066451288164
+Comparative between powerlaw and lognormal
+-0.5851483301428676 0.5584479841003885
+Comparative between powerlaw and exponential
+12.630764425375073 1.4288339588153391e-36
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-2.422030752358118 0.0328536570260215
+Comparative between truncated powerlaw and lognormal positive 
+2.9871432139727774 0.0028159777282108192 
+
+
+------------------------------
+Summary of  mojo  from 0 to  2361
+Estimated value of alpha parameter:  2.1308792705638373
+Estimated first value where powerlaw is exposed:  101.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.07766910718126539
+Comparative between powerlaw and lognormal
+0.3223426941208049 0.74719309250453
+Comparative between powerlaw and exponential
+3.473328053334292 0.0005140466227147906
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-0.31509297593297564 0.8740718400848078
+Comparative between truncated powerlaw and lognormal positive 
+1.1407904360749004 0.2539571415006765 
+
+
+------------------------------
+Summary of  mojo  from 0 to  4722
+Estimated value of alpha parameter:  1.97978445795298
+Estimated first value where powerlaw is exposed:  37.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.03017937494002489
+Comparative between powerlaw and lognormal
+-0.9234899859188482 0.3557519166369044
+Comparative between powerlaw and exponential
+5.565780162342568 2.6098210070261986e-08
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-1.2155770552515806 0.13603821193479926
+Comparative between truncated powerlaw and lognormal positive 
+1.0606073706057704 0.28886837153692624 
+
+
+------------------------------
+Summary of  mojo  from 0 to  7084
+Estimated value of alpha parameter:  2.068625262125592
+Estimated first value where powerlaw is exposed:  45.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.03073351873078763
+Comparative between powerlaw and lognormal
+-0.20997486101715293 0.8336872936546366
+Comparative between powerlaw and exponential
+5.976394033929013 2.2813082604809546e-09
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-0.9506106189908579 0.3225769091663371
+Comparative between truncated powerlaw and lognormal positive 
+2.3523098530188897 0.018657226030786525 
+
+
+------------------------------
+Summary of  mojo  from 0 to  9445
+Estimated value of alpha parameter:  2.099201115397522
+Estimated first value where powerlaw is exposed:  45.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.029325066004193226
+Comparative between powerlaw and lognormal
+-0.25527488566975937 0.7985107958379691
+Comparative between powerlaw and exponential
+6.044127481211076 1.5022070306036608e-09
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-0.895824196939789 0.33828784790191047
+Comparative between truncated powerlaw and lognormal positive 
+2.339182782508301 0.019325975770852245 
+
+
+------------------------------
+Summary of  tty  from 0 to  235
+Estimated value of alpha parameter:  2.350249019408126
+Estimated first value where powerlaw is exposed:  48.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.15591332696566193
+Comparative between powerlaw and lognormal
+-1.7172078357262712 0.08594120436842165
+Comparative between powerlaw and exponential
+-0.673201038132991 0.5008194008478852
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-1.8763160321141192 0.003815128143449309
+Comparative between truncated powerlaw and lognormal positive 
+1.1391889648974645 0.2546243471995058 
+
+
+------------------------------
+Summary of  tty  from 0 to  470
+Estimated value of alpha parameter:  2.0072074033031915
+Estimated first value where powerlaw is exposed:  35.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.07570634440678872
+/home/booort/virtualenviroments/py3.6/lib/python3.6/site-packages/powerlaw.py:1560: RuntimeWarning: invalid value encountered in true_divide
+  return likelihoods/norm
+Comparative between powerlaw and lognormal
+-1.00219997668948 0.31624701906850106
+Comparative between powerlaw and exponential
+6.804264681818688 1.0156665595273719e-11
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-0.06773314331883465 0.988468862120081
+Comparative between truncated powerlaw and lognormal positive 
+1.4643895901330028 0.14308753077617056 
+
+
+------------------------------
+Summary of  tty  from 0 to  705
+Estimated value of alpha parameter:  1.9243257175510378
+Estimated first value where powerlaw is exposed:  29.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.05788352172051708
+Comparative between powerlaw and lognormal
+1.0265640034557364 0.30462581130688804
+Comparative between powerlaw and exponential
+8.47805017378848 2.2899921651766343e-17
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-0.7065858961353603 0.9302293244698213
+Comparative between truncated powerlaw and lognormal positive 
+1.8703719623596646 0.061432182663338906 
+
+
+------------------------------
+Summary of  tty  from 0 to  940
+Estimated value of alpha parameter:  1.768418254573159
+Estimated first value where powerlaw is exposed:  20.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.03813595765041746
+Comparative between powerlaw and lognormal
+0.4881754483977075 0.6254255732852884
+Comparative between powerlaw and exponential
+10.856357696623055 1.8602154691416915e-27
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-1.6452227067413074 0.41669780813174717
+Comparative between truncated powerlaw and lognormal positive 
+2.4268615339549537 0.015230067346437 
+
+
+------------------------------
+Summary of  rakudo  from 0 to  6504
+Estimated value of alpha parameter:  1.6626793039821992
+Estimated first value where powerlaw is exposed:  14.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.0133311321860042
+Comparative between powerlaw and lognormal
+2.924037987500756 0.003455225774546097
+Comparative between powerlaw and exponential
+35.850649146246035 1.7967140364914754e-281
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-4.385106327747225 0.12980346929544007
+Comparative between truncated powerlaw and lognormal positive 
+5.980242566400258 2.2280558551619492e-09 
+
+
+------------------------------
+Summary of  rakudo  from 0 to  13008
+Estimated value of alpha parameter:  1.5922804074914052
+Estimated first value where powerlaw is exposed:  10.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.007823699517512283
+Comparative between powerlaw and lognormal
+-0.3237097781085648 0.7461577672858286
+Comparative between powerlaw and exponential
+48.177740828961795 0.0
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-8.358955651591705 5.301308008687222e-06
+Comparative between truncated powerlaw and lognormal positive 
+9.449118991525895 3.416944677993163e-21 
+
+
+------------------------------
+Summary of  rakudo  from 0 to  19512
+Estimated value of alpha parameter:  1.5607996454651947
+Estimated first value where powerlaw is exposed:  10.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.006064914363799445
+Comparative between powerlaw and lognormal
+-3.268457028129414 0.001081355966433411
+Comparative between powerlaw and exponential
+44.00627868469165 0.0
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-11.236621088302602 0.0
+Comparative between truncated powerlaw and lognormal positive 
+10.547991795960153 5.189439527402824e-26 
+
+
+------------------------------
+Summary of  rakudo  from 0 to  26016
+Estimated value of alpha parameter:  1.5657070751118274
+Estimated first value where powerlaw is exposed:  11.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.005423469006925265
+Comparative between powerlaw and lognormal
+-3.77862413428222 0.000157697237483462
+Comparative between powerlaw and exponential
+47.62070748898427 0.0
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-12.716356925702962 0.0
+Comparative between truncated powerlaw and lognormal positive 
+13.017704015372157 9.704518751241108e-39 
+
+
+------------------------------
+Summary of  django  from 0 to  8006
+Estimated value of alpha parameter:  1.2560481799381908
+Estimated first value where powerlaw is exposed:  2.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.003094364921516659
+Comparative between powerlaw and lognormal
+-16.50075418514334 3.623387135854945e-61
+Comparative between powerlaw and exponential
+52.436408657816614 0.0
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-24.0488312828589 0.0
+Comparative between truncated powerlaw and lognormal positive 
+23.527881057399878 2.114909290292972e-122 
+
+
+------------------------------
+Summary of  django  from 0 to  16012
+Estimated value of alpha parameter:  1.1821225267325
+Estimated first value where powerlaw is exposed:  1.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.0014490265998923831
+Comparative between powerlaw and lognormal
+-34.85080197812963 4.140209258218578e-266
+Comparative between powerlaw and exponential
+94.09381721269587 0.0
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-46.91083850883329 0.0
+Comparative between truncated powerlaw and lognormal positive 
+39.39106868450075 0.0 
+
+
+------------------------------
+Summary of  django  from 0 to  24018
+Estimated value of alpha parameter:  1.1741884327701053
+Estimated first value where powerlaw is exposed:  1.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.0011322400983501892
+Comparative between powerlaw and lognormal
+-41.9068950903604 0.0
+Comparative between powerlaw and exponential
+143.0510461338345 0.0
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-59.51030695905502 0.0
+Comparative between truncated powerlaw and lognormal positive 
+51.74862523822026 0.0 
+
+
+------------------------------
+Summary of  django  from 0 to  32024
+Estimated value of alpha parameter:  1.8251737734445301
+Estimated first value where powerlaw is exposed:  26301.0
+Estimated last value where powerlaw is exposed:  None
+Estimated precision of alpha parameter: +/- 0.009547399937488567
+Comparative between powerlaw and lognormal
+-17.82318376358069 4.6701298782998556e-71
+Comparative between powerlaw and exponential
+4.912045395587398 9.013117773249042e-07
+Assuming nested distributions
+Comparative between powerlaw and truncated power law
+-23.196277029305108 0.0
+Comparative between truncated powerlaw and lognormal positive 
+29.652276514273048 3.1699231547683406e-193 
+

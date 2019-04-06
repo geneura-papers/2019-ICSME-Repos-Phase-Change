@@ -13,15 +13,10 @@
 \begin{document}
 
 \title{Temporal Evolution In Commit Size Distribution\\
-	\thanks{----}
-}
+  \thanks{----} }
 
-\author{\IEEEauthorblockN{-}
-	\IEEEauthorblockA{-}
-	\and
-	\IEEEauthorblockN{-}
-	\IEEEauthorblockA{-}
-}
+\author{\IEEEauthorblockN{-} \IEEEauthorblockA{-} \and
+  \IEEEauthorblockN{-} \IEEEauthorblockA{-} }
 
 \maketitle
 
@@ -74,14 +69,14 @@
 \end{abstract}
 
 \begin{IEEEkeywords}
-	Complex systems, self-organizing systems, self-organized criticality, power laws, software development, 
-	software repositories
+  Complex systems, self-organizing systems, self-organized
+  criticality, power laws, software development, software repositories
 \end{IEEEkeywords}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   INTRODUCTION   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{introduction}
-. 
+.
 
 % --------------------------------------------------------
 
@@ -96,14 +91,173 @@
 \section{Methodology}
 \label{sec:method}
 
+In this section we are going to explain the methods used in our
+research.
+
+Our methodology hinges on four distinguished parts of our workflow.
+First of all, we highlight the process of data extraction, which
+follows particular considerations within the usual study of
+repositories. Later we talk about the mathematics behind our
+approaches to understand the distribution behind the data, which leads
+to the third part, where we collect the information obtained in the
+previous one and explain how it has been classified. Finally we added
+a section of visualization to briefly explain some changes that can be
+disconcerting when it comes to visualizing possible power laws.
+
+
+\subsection{Data extraction}
+%% rewrite
+We have chosen 5 repositories in different states of development.
+These repositories were chosen in \cite{Merelo2016:repomining}, for
+several reasons: They all represent a wide array of languages and
+functionalities, from web frameworks such as Django to Atom plugins,
+through one-of-a-kind frameworks such as Docker.
+
+Normally a code repository is related to a software project, for this
+reason, it is usual that they include several different languages
+which are used in different parts of the project.  This mixture of
+languages also offer a big range of variability between languages that
+are interpreted or compiled, either to machine code or to bytecode.
+
+Repositories vary also in {\em professionalism}, that is, the team
+behind that software project. From a small Atom editor plugin to
+TensorFlow, an open library created and maintained by a fully
+professional community.
+
+Repository mining was done during the months of January to March 2017,
+with the second sweep of the same repositories performed in February
+2019.
+
+The way we look at changes in the repository was initially proposed by
+\cite{Merelo2016:repomining} and was also used in
+\cite{merelo2017self}, where a deeper explanation can be found.
+
+
+This procedure is based on three main concepts:
+\begin{itemize}
+\item The usage of a discrete timeline formed by the commits, with
+  every commit counting as time=1.
+\item Work with selected files in the repository, excluding those
+  related to images or style
+\item We take the largest value from the inserted and deleted lines of
+  code.
+\end{itemize}
+
+Up to this point, there is nothing new. But is the way that we
+evaluate our results that differs from previous analysis.
 
 \subsection{Hypothesis tests}
 
+Once the information from the repositories has been extracted, we
+proceed to analyze it in order to find clues about what kind of
+distribution is generating our data.
 
+With that particular objective in mind, we change the methodology used
+in \cite{merelo2017self} for several reasons.
+
+First of all we want to offer a test that checks whether the observed
+data set actually follows a power-law, instead of only visualize the
+result.  This kind of tests can vary based on different measured and
+techniques. The one we are going to use is suggested in
+\cite{clauset2009power}, which consists in using a goodness-of-fit
+hypothesis test via bootstrapping procedure.
+
+Due to the use of bootstrapping, this procedure is a time and
+resources consuming one.  We essentially generate multiple data sets
+with our two main parameters $x_{min}$ and $\alpha$ and then we
+re-infer the model parameters. The outcome of the algorithm will
+result in a P-value, which, if is large enough, tell us that the
+difference between our data and the power law model we have generated
+is small and mostly attributed to statistically randomness. On the
+other hand, if P-value is close to 0, it is quite unlikely that our
+model fits the data properly.  Following \cite{clauset2009power} we
+choose our threshold value in $p=0.01$, in addition we are going to
+perform this analysis with R package: PoweRlaw. A detailed description
+of it and the hypothesis tests can be found in
+\cite{gillespie2015power}.
+
+Up to this point, we have detected what data sets are unlikely to be
+fitted by a power law in any of its range. Notice, on the contrary
+case, that we are only assuming that we can not discard that a power
+law is generating the data.  However, as there is some probability of
+the appearance of this distribution in our data we can study and
+analyze how its two main parameters may evolve between 2017 and 2019.
+
+As it is unrealistic to think that a power law distribution will fit
+all our data, our first step is to check what portion of the data
+could be fitted with a power law, or in other words, what is the
+minimal value (if there is one) from which the scaling relationship of
+the power law begins \footnote{This is a fair assumption since we are
+  working with heavy-tailed distributions and our main interest is the
+  behaviour of the tail of our data.}.  This value is usually noted by
+$x_{min}$ and is our first parameter.
+
+Once we have the first value, we proceed to estimate the scale of our
+power law.  As it is shown in papers like \cite{newman2005power,
+  clauset2009power}, least square method is a poor but wide-spreaded
+way to proceed when estimating the scale parameter. Instead, we are
+going to use a direct method describe in \cite{clauset2009power} and
+implemented in \cite{alstott2014powerlaw} that use the data values we
+have. This method is known to produce a very nice fit with less error
+than the others mentioned above.
+
+Up to this point we have revisited our way of analyze power law
+fitting and the estimation of our parameters. However, there is a more
+deep question unanswered: does our data really follow (in a
+statistically relevant way) a power law?  This kind of answers were
+lacking in \cite{merelo2017self} and they are relevant independently
+our first test's results, since they usually offer an unbiased look of
+the data .
+
+Taking into account that our main question is wether a power law is
+the best description of our data, we choose to apply a comparative
+test that could evaluate if there are any alternative distribution
+that could have generated our data with greater likelihood than a
+power law. That is the main reason why we choose to use a
+log-likelihood ratio test implemented in \cite{alstott2014powerlaw}.
+There are two algorithm's outcomes. First we have the log-likelihood
+ratio between the two candidate distributions. The sign of this
+quantity will point out which distribution is more likely to be
+producing out data. After it, we calculate the signification of this
+ratio, a P-value. Following \cite{alstott2014powerlaw} indications we
+establish our P-value threshold at $p=0.05$; above that point the
+loglikehood ratio has no significance and we can not decide which
+distribution is better fitting out data.
 
 \subsection{Classification}
 
+With all this information we are able to offer a precise conclusion
+about the probability that power law is generating our data. To sum up
+all the tests in a single statement we use the scale proposed in
+\cite{clauset2009power}, which is described as:
+\begin{itemize}
+\item \textbf{None}: Data-set is probably not distributed by a power
+  law (first test failed).
+\item \textbf{Moderate}: Power law is a possible fit but there are
+  other plausible distributions that fit the data.
+\item \textbf{Good}: Power law is a possible fit and none of the other
+  distributions is plausible.
+\item \textbf{Truncated}: when truncated power law is clearly favored
+  over a simple power law
+\end{itemize}
+
+A relevant remark should be made: Even when the first test give us a
+low probability of our data being distributed by a power law, the next
+tests offers us an interesting insight. A power law can exceed others
+distributions at explaining how our data is distributed, meaning that,
+even though our data is not distributed by a power law, this fit could
+offer us more information about our data than other distributions.
+
 \subsection{Visualization}
+ 
+On the visual aspects, an aclaration should be made. Here we offer a
+graphical view that differs from \cite{merelo2017self} but not a novel
+one. It has been used in \cite{arafat2009commit} with similar
+purposes.  Briefly, we are going to use the probability density
+function (PDF) for plotting. Due to the requirement of binning the
+data to this type of graphic, we are going to use a logarithmic
+spacing, since it reduces the statistical errors in the tail in
+log-log plots at it is stated in \cite{newman2005power}.
 
 
 
@@ -120,7 +274,6 @@
 \section{Conclusions}\label{conc}
 
 
-\bibliographystyle{apalike}
-\bibliography{biblio}
+\bibliographystyle{apalike} \bibliography{biblio}
 
 \end{document}
