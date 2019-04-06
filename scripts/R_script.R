@@ -20,13 +20,13 @@ for (repo_name in repo_names){
 repo_name <- "mojo"
 
 # Analysis for the 2017 repos
-par(mfrow=c(3,2))
+par(mfrow=c(2,2))
 
 repo = paste("lines_",repo_name,"_diffs.csv",sep="")
 data <- read.csv(repo) # import data
 data <- data[data>0] # erase commits with 0 changes
 final_data = data.matrix(data) # Update vector type
-for (n in c(2000,4000,6000,8000,10000,length(final_data))){
+for (n in c(2361,4722,7084,length(final_data))){
   used_data <- final_data[1:n]
   plot(used_data, xlab=" Commits", ylab="Commit Size", main= repo_name)
   lines(used_data, type="l") 

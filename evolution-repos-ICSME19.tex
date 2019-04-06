@@ -76,7 +76,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}\label{introduction}
-.
+
 
 % --------------------------------------------------------
 
@@ -105,7 +105,7 @@ a section of visualization to briefly explain some changes that can be
 disconcerting when it comes to visualizing possible power laws.
 
 
-\subsection{Data extraction}
+\subsection{Data extraction and division}
 %% rewrite
 We have chosen 5 repositories in different states of development.
 These repositories were chosen in \cite{Merelo2016:repomining}, for
@@ -143,38 +143,33 @@ This procedure is based on three main concepts:
   code.
 \end{itemize}
 
-Up to this point, there is nothing new. But is the way that we
-evaluate our results that differs from previous analysis.
+%% New
+Since we want to understand how commits distribution evolve, we
+decided to divided each dataset into 5 different sections, each of
+them of equal size. These division are made in the commit order and
+represent progressive temporal windows in a evolving system like these
+repositories.
+
+With those divisions made we generate 5 different datasets, each one
+contains its corresponding section and all the previous ones, which
+means we analyze all the information until the final commit of the
+section.  These hopefully provide us a sigth in the evolution in time
+of the commits distribution.
+
 
 \subsection{Hypothesis tests}
 
-Once the information from the repositories has been extracted, we
-proceed to analyze it in order to find clues about what kind of
-distribution is generating our data.
+Once those datasets are extracted, we begin to check the probability
+of finding powerlaw or similar heavy-tailed distributions in the
+dataset.
 
-With that particular objective in mind, we change the methodology used
-in \cite{merelo2017self} for several reasons.
-
-First of all we want to offer a test that checks whether the observed
-data set actually follows a power-law, instead of only visualize the
-result.  This kind of tests can vary based on different measured and
-techniques. The one we are going to use is suggested in
+First of all we could test that checks whether the observed data set
+actually follows a power-law, instead of only visualize the result.
+This kind of tests can vary based on different measured and
+techniques. The most popular one is presented in
 \cite{clauset2009power}, which consists in using a goodness-of-fit
 hypothesis test via bootstrapping procedure.
 
-Due to the use of bootstrapping, this procedure is a time and
-resources consuming one.  We essentially generate multiple data sets
-with our two main parameters $x_{min}$ and $\alpha$ and then we
-re-infer the model parameters. The outcome of the algorithm will
-result in a P-value, which, if is large enough, tell us that the
-difference between our data and the power law model we have generated
-is small and mostly attributed to statistically randomness. On the
-other hand, if P-value is close to 0, it is quite unlikely that our
-model fits the data properly.  Following \cite{clauset2009power} we
-choose our threshold value in $p=0.01$, in addition we are going to
-perform this analysis with R package: PoweRlaw. A detailed description
-of it and the hypothesis tests can be found in
-\cite{gillespie2015power}.
 
 Up to this point, we have detected what data sets are unlikely to be
 fitted by a power law in any of its range. Notice, on the contrary
@@ -226,10 +221,10 @@ distribution is better fitting out data.
 
 \subsection{Classification}
 
-With all this information we are able to offer a precise conclusion
-about the probability that power law is generating our data. To sum up
-all the tests in a single statement we use the scale proposed in
-\cite{clauset2009power}, which is described as:
+Since we are trying to uncover any variation we have decide to
+summarize all the tests in a single statement, and see if it
+changes. We use the scale proposed in \cite{clauset2009power}, which
+is described as:
 \begin{itemize}
 \item \textbf{None}: Data-set is probably not distributed by a power
   law (first test failed).
@@ -241,23 +236,19 @@ all the tests in a single statement we use the scale proposed in
   over a simple power law
 \end{itemize}
 
-A relevant remark should be made: Even when the first test give us a
-low probability of our data being distributed by a power law, the next
-tests offers us an interesting insight. A power law can exceed others
-distributions at explaining how our data is distributed, meaning that,
-even though our data is not distributed by a power law, this fit could
-offer us more information about our data than other distributions.
+A relevant remark should be made: These scale clearly can obscure out
+conclusions.  Maybe a more refined scale can expose slightly smaller
+changes and split two equal classification (made with the scale
+presented ) in two different categories.
 
 \subsection{Visualization}
  
-On the visual aspects, an aclaration should be made. Here we offer a
-graphical view that differs from \cite{merelo2017self} but not a novel
-one. It has been used in \cite{arafat2009commit} with similar
-purposes.  Briefly, we are going to use the probability density
-function (PDF) for plotting. Due to the requirement of binning the
-data to this type of graphic, we are going to use a logarithmic
-spacing, since it reduces the statistical errors in the tail in
-log-log plots at it is stated in \cite{newman2005power}.
+For the graphics included we should specify that we are going to use
+the probability density function (PDF) in our plots. Due to the
+requirement of binning the data to this type of graphic, we are going
+to use a logarithmic spacing, since it reduces the statistical errors
+in the tail in log-log plots at it is stated in
+\cite{newman2005power}.
 
 
 
@@ -266,6 +257,138 @@ log-log plots at it is stated in \cite{newman2005power}.
 
 \section{Results}
 \label{res}
+
+\begin{figure*}[htbp]
+	\centerline{\includegraphics[width=0.95\textwidth]{img/mojo_temporal.eps}}
+	\caption{Evolution in temporal windows of Commit size vs. Commit number in mojo's repository.}
+	\label{fig:cask}
+      \end{figure*}
+
+\begin{figure*}[htbp]
+	\centerline{\includegraphics[width=0.95\textwidth]{img/adjusted_dist_cask.svg}}
+	\caption{2-column plot fom cask repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson}
+	\label{fig:cask}
+      \end{figure*}
+
+     
+\begin{figure*}[htbp]
+	\centerline{\includegraphics[width=0.95\textwidth]{img/mojo_global_estimation.eps}}
+	\caption{2-column plot fom mojo repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson}
+	\label{fig:mojo}
+      \end{figure*}
+
+
+\begin{figure*}[htbp]
+	\centerline{\includegraphics[width=0.95\textwidth]{img/tty_global.eps}}
+	\caption{2-column plot fom tty repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson}
+	\label{fig:tty}
+\end{figure*}
+
+\begin{figure*}[htbp]
+	\centerline{\includegraphics[width=0.95\textwidth]{img/rakudo_global_plot.eps}}
+	\caption{2-column plot fom rakudo repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson}
+	\label{fig:rakudo}
+\end{figure*}
+
+\begin{figure*}[htbp]
+	\centerline{\includegraphics[width=0.95\textwidth]{img/django_global_set.eps}}
+	\caption{2-column plot fom Django repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson }
+	\label{fig:django}
+\end{figure*}
+
+
+\begin{table*}[h!tbp]
+	\caption{Cask summary results}
+	\begin{center}
+		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
+			\hline
+                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+                  Commit range 1 &  LogN & PL  & PL vs. PLtrunc & Result \\
+                  Commit range 2& ND & PL  & ND & Result \\
+                  Commit range 3& ND  &  PL & ND & Result \\
+                  Commit range 4& ND & PL  & ND & Result \\
+			\hline
+
+			\hline
+		\end{tabular}
+	\end{center}
+\label{tab:2019testscask}
+\end{table*}
+
+\begin{table*}[h!tbp]
+	\caption{Django summary results}
+	\begin{center}
+		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
+			\hline
+                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+                  Commit range 1 &  LogN & PL  &PLtrunc & Result \\
+                  Commit range 2&  LogN & PL  &PLtrunc & Result \\
+                  Commit range 3&  LogN & PL  &PLtrunc & Result \\
+                  Commit range 4&  LogN & PL  &PLtrunc & Result \\
+			\hline
+
+			\hline
+		\end{tabular}
+	\end{center}
+\label{tab:2019testsdjango}
+\end{table*}
+
+
+\begin{table*}[h!tbp]
+	\caption{Rakudo summary results}
+	\begin{center}
+		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
+			\hline
+                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+                  Commit range 1 &   LogN & PL  &PLtrunc & Result \\
+                  Commit range 2&  LogN & PL  &PLtrunc & Result \\
+                  Commit range 3&  LogN & PL  &PLtrunc & Result \\
+                  Commit range 4&  LogN & PL  &PLtrunc & Result \\
+			\hline
+
+			\hline
+		\end{tabular}
+	\end{center}
+\label{tab:2019testsrakudo}
+\end{table*}
+
+
+\begin{table*}[h!tbp]
+	\caption{Mojo summary results}
+	\begin{center}
+		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
+			\hline
+                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+                  Commit range 1 &  ND & PL  & ND & Result \\
+                  Commit range 2& ND & PL  & ND & Result \\
+                  Commit range 3& ND  &  PL & ND & Result \\
+                  Commit range 4& ND & PL  & ND & Result \\
+			\hline
+
+			\hline
+		\end{tabular}
+	\end{center}
+\label{tab:2019testsmojo}
+\end{table*}
+
+
+\begin{table*}[h!tbp]
+	\caption{tty summary results}
+	\begin{center}
+		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
+			\hline
+                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+                  Commit range 1 & ND & ND  & PLtrunc & Result \\
+                  Commit range 2& ND & PL  & ND & Result \\
+                  Commit range 3& ND  &  PL & ND & Result \\
+                  Commit range 4& ND & PL  & ND & Result \\
+			\hline
+
+			\hline
+		\end{tabular}
+	\end{center}
+\label{tab:2019teststty}
+\end{table*}
 
 
 % --------------------------------------------------------
