@@ -16,8 +16,9 @@
 \title{Temporal Evolution In Commit Size Distribution\\
   \thanks{----} }
 
-\author{\IEEEauthorblockN{-} \IEEEauthorblockA{-} \and
-  \IEEEauthorblockN{-} \IEEEauthorblockA{-} }
+\author{\IEEEauthorblockN{Omitted for submission} \IEEEauthorblockA{-}
+  \and \IEEEauthorblockN{Omitted for submission} \IEEEauthorblockA{-}
+}
 
 \maketitle
 
@@ -30,12 +31,12 @@
   leader. Understanding if and how a software development team
   self-organizes might give hints on how to improve productivity,
   reduce bugs or, in the case of open source systems based on
-  volunteer woor, reduce churn and increase engagement.
-  However, one of the essential characteristics needed to understand
-  this type of systems' behaviour and to know if we are truly dealing
-  with an auto-organized community is the appearance or not of a power
-  law in the events' size distributions.  In this case, we have chosen
-  to treat commits as our events, that is, additions to the code by
+  volunteer woor, reduce churn and increase engagement.  However, one
+  of the essential characteristics needed to understand this type of
+  systems' behaviour and to know if we are truly dealing with an
+  auto-organized community is the appearance or not of a power law in
+  the events' size distributions.  In this case, we have chosen to
+  treat commits as our events, that is, additions to the code by
   users.
   % - This is our choice and should be presented that way. Other
   % people might use a different thing, like file size, author
@@ -53,16 +54,16 @@
   over the evolution of commit's distribution in software
   projects. For that, we have selected a set of repositories that
   exhibit singular behaviors such as a large number of contributions
-  versus few or inconclusive results in statistical tests.
-  Our study seeks to provide conclusive evidence about the state of
-  the chosen repositories, answering wether they have not reached a
-  state of self-organization in all its evolution (that is, never
-  present power law distributions) or, if they have done so, but due
-  to other code insertions and to the temporary nature of the creative
-  process, this self-organized state has been altered.
+  versus few or inconclusive results in statistical tests.  Our study
+  seeks to provide conclusive evidence about the state of the chosen
+  repositories, answering wether they have not reached a state of
+  self-organization in all its evolution (that is, never present power
+  law distributions) or, if they have done so, but due to other code
+  insertions and to the temporary nature of the creative process, this
+  self-organized state has been altered.
 
-% Abstract don't normally have paragraph, and in this phse it should
-% have to be a bit shorter - JJ
+  % Abstract don't normally have paragraph, and in this phse it should
+  % have to be a bit shorter - JJ
 
 \end{abstract}
 
@@ -113,21 +114,21 @@ software development system is in.
 One of the ways of knowing if the system is in that desired critical
 state is finding power laws in the size of changes. These power laws,
 however, are more elusive that were discovered at first sight, with
-the mathematical precise establishment of that hypotesis being only
-possible via a strict hypotesis testing. Besides, the critical state
+the mathematical precise establishment of that hypothesis being only
+possible via a strict hypothesis testing. Besides, the critical state
 is not a given, but established in a certain point in time.
 
 The main objective of this paper is to establish whether a set of
-chosen repositories follow a power law or, in precise statiscal terms,
+chosen repositories follow a power law or, in precise statistical terms,
 if their distribution of sizes is best described by a power law (as
-compared with other statistical distributions), and if they do, in what moment
-in time they started to follow it.
+compared with other statistical distributions), and if they do, in
+what moment in time they started to follow it.
 
 In order to do so, we follow the discrete step of commits as a
 timeline, working with the number of lines changed in every commit. In
 order to check the temporal evolution, we divide the commit timeline
 in five parts, and check our hypotheses for every one of them. This
-rigorous and principled hypotesis test procedure will allow us to
+rigorous and principled hypothesis test procedure will allow us to
 establish whether, or not, the chosen repositories are self-organized
 or not. From the observation of the features of the repositories, we
 will eventually reach some conclusions.
@@ -143,23 +144,48 @@ finally we will outline our conclusions.
 \section{State of the art}\label{soa}
 
 
-%Taken from previous paper. It's not accepted yet and we can always
-%improve it later on - JJ
-The study of code repositories from the point of view of self-organized criticality has not followed a continuous line of investigation.
+% Taken from previous paper. It's not accepted yet and we can always
+% improve it later on - JJ
+The study of code repositories from the point of view of
+self-organized criticality has not followed a continuous line of
+investigation.
 
 On the one hand, we find that self-organized criticality has been
-Description of a wide variety of code repositories with a certain probability. These studies can be found in\cite{wu2007empirical,gorshenev2004punctuated}, but they are not the only ones of this kind. Tests on the possible self-organized criticality have also been sought in another type of repositories and projects, which are enumerable in size and purpose \cite{Merelo2016:repomining,merelo16:slash,merelo16:self,merelo2017self}.
+Description of a wide variety of code repositories with a certain
+probability. These studies can be found
+in\cite{wu2007empirical,gorshenev2004punctuated}, but they are not the
+only ones of this kind. Tests on the possible self-organized
+criticality have also been sought in another type of repositories and
+projects, which are enumerable in size and purpose
+\cite{Merelo2016:repomining,merelo16:slash,merelo16:self,merelo2017self}.
 
-In most of these studies, however, the evidences in favor of the existence of a power law are not accompanied by a significant statistical study. It is usual, as described in \cite{newman2005power} that the evidence leading to a suggestion of a power law in the distribution is visual. Once we have these tests, the study goes through the adjustment of a possible powerlaw \cite{merelo2017self,arafat2009commit}.
+In most of these studies, however, the evidences in favor of the
+existence of a power law are not accompanied by a significant
+statistical study. It is usual, as described in \cite{newman2005power}
+that the evidence leading to a suggestion of a power law in the
+distribution is visual. Once we have these tests, the study goes
+through the adjustment of a possible powerlaw
+\cite{merelo2017self,arafat2009commit}.
 
-The general trend being the lack of statistical evidence that supports the hypothesis of the existence of a power law, the truth is that as described in \cite{newman2005power, clauset2009power} the most common method for making subsequent adjustments, Leas Square Medium \cite{merelo2017self,arafat2009commit,merelo16:self}, usually implies the existence of a greater error than the possible alternatives.
+The general trend being the lack of statistical evidence that supports
+the hypothesis of the existence of a power law, the truth is that as
+described in \cite{newman2005power, clauset2009power} the most common
+method for making subsequent adjustments, Leas Square Medium
+\cite{merelo2017self,arafat2009commit,merelo16:self}, usually implies
+the existence of a greater error than the possible alternatives.
 
-Currently, the general trend that started with the description of the power laws in self-organized systems has been slowed down. Instead, due to the existence of more objective evaluation methods, the results that were assumed until now are being re-evaluated.
+Currently, the general trend that started with the description of the
+power laws in self-organized systems has been slowed down. Instead,
+due to the existence of more objective evaluation methods, the results
+that were assumed until now are being re-evaluated.
 
-Examples of this trend are papers such as \cite{Holme2019, Broido2019}, where the power laws in the networks and in the results have been reevaluated, obtaining an analysis that can change the way we make our assumptions about power laws.
+Examples of this trend are papers such as \cite{Holme2019,
+  Broido2019}, where the power laws in the networks and in the results
+have been reevaluated, obtaining an analysis that can change the way
+we make our assumptions about power laws.
 
-Next we will present the methodology used to choose those repositories and
-mine their information. 
+Next we will present the methodology used to choose those repositories
+and mine their information.
 
 
 % --------------------------------------------------------
@@ -247,7 +273,6 @@ techniques. The most popular one is presented in
 \cite{clauset2009power}, which consists in using a goodness-of-fit
 hypothesis test via bootstrapping procedure.
 
-
 Up to this point, we have detected what data sets are unlikely to be
 fitted by a power law in any of its range. Notice, on the contrary
 case, that we are only assuming that we can not discard that a power
@@ -277,7 +302,7 @@ Up to this point we have revisited our way of analyze power law
 fitting and the estimation of our parameters. However, there is a more
 deep question unanswered: does our data really follow (in a
 statistically relevant way) a power law?  This kind of answers were
-lacking in \cite{merelo2017self} and they are relevant independently
+lacking in studies like \cite{merelo2017self} and they are relevant independently
 our first test's results, since they usually offer an unbiased look of
 the data .
 
@@ -327,6 +352,11 @@ to use a logarithmic spacing, since it reduces the statistical errors
 in the tail in log-log plots at it is stated in
 \cite{newman2005power}.
 
+We also add Poisson distribution in the plots as an visual explanation
+on why we do not make any hypothesis test with this kind of
+distribution even though is a common example of heavy-tailed
+distribution.
+
 
 
 % --------------------------------------------------------
@@ -334,148 +364,211 @@ in the tail in log-log plots at it is stated in
 
 \section{Results}
 \label{res}
+In this section we present all the results obtained in our numerical
+experiments.
+
+On one hand we offer all the visualizations of all the temporal
+sections made in the repositories. A pure example of these slices and how they evolve in the case of Mojo's repository can be found
+in \ref{fig:mojoev}.
+
+Moreover we have drawn 5 global plots that show  a visual distribution of the changes till the last commit of the section, and, next to these, a PDF plot of the distribution in a log/log scale with different
+distribution adjusted. We have applied the same procedure in all repositories:Fig \ref{fig:cask}, \ref{fig:mojo}, \ref{fig:rakudo}, \ref{fig:django}, \ref{fig:tty}.
+
+In addition, we have summarized in several tables the evolution of the
+hypothesis tests performed comparing the distributions with the power
+law. We add to these tables the information of the tests on the
+likelihood of having a distribution of power law in order to give a
+final grade according to the predefined scale: TABLE \ref{tab:2019testscask}, \ref{tab:2019testsdjango}, \ref{tab:2019testsmojo}, \ref{tab:2019testsrakudo}, \ref{tab:2019teststty}.
+
+
 
 \begin{figure*}[htbp]
-	\centerline{\includegraphics[width=0.95\textwidth]{img/mojo_temporal.eps}}
-	\caption{Evolution in temporal windows of Commit size vs. Commit number in mojo's repository.}
-	\label{fig:cask}
-      \end{figure*}
+  \centerline{\includegraphics[width=0.95\textwidth]{img/mojo_temporal.eps}}
+  \caption{Evolution in temporal windows of Commit size vs. Commit
+    number in mojo's repository.}
+  \label{fig:mojoev}
+\end{figure*}
 
 \begin{figure*}[htbp]
-	\centerline{\includegraphics[width=0.95\textwidth]{img/adjusted_dist_cask.png}}
-	\caption{2-column plot fom cask repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson}
-	\label{fig:cask}
-      \end{figure*}
+  \centerline{\includegraphics[width=0.95\textwidth]{img/adjusted_dist_cask.png}}
+  \caption{2-column plot fom cask repository. On the right side an
+    simple plot with the number of lines changed in every commit in
+    front of commit's number is presented. For this particular
+    temporal segment we plot the PDF plot of it, presenting possible
+    distributions fits: Red,power laws; Blue, Log Normal; Green:
+    Poisson}
+  \label{fig:cask}
+\end{figure*}
 
      
 \begin{figure*}[htbp]
-	\centerline{\includegraphics[width=0.95\textwidth]{img/mojo_global_estimation.eps}}
-	\caption{2-column plot fom mojo repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson}
-	\label{fig:mojo}
-      \end{figure*}
-
-
-\begin{figure*}[htbp]
-	\centerline{\includegraphics[width=0.95\textwidth]{img/tty_global.eps}}
-	\caption{2-column plot fom tty repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson}
-	\label{fig:tty}
-\end{figure*}
-
-\begin{figure*}[htbp]
-	\centerline{\includegraphics[width=0.95\textwidth]{img/rakudo_global_plot.eps}}
-	\caption{2-column plot fom rakudo repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson}
-	\label{fig:rakudo}
-\end{figure*}
-
-\begin{figure*}[htbp]
-	\centerline{\includegraphics[width=0.95\textwidth]{img/django_global_set.eps}}
-	\caption{2-column plot fom Django repository. On the right side an simple plot with the number of lines changed in every commit in front of commit's number is presented. For this particular temporal segment we plot the PDF plot of it, presenting possible distributions fits: Red,power laws; Blue, Log Normal; Green: Poisson }
-	\label{fig:django}
+  \centerline{\includegraphics[width=0.95\textwidth]{img/mojo_global_estimation.eps}}
+  \caption{2-column plot fom mojo repository. On the right side an
+    simple plot with the number of lines changed in every commit in
+    front of commit's number is presented. For this particular
+    temporal segment we plot the PDF plot of it, presenting possible
+    distributions fits: Red,power laws; Blue, Log Normal; Green:
+    Poisson}
+  \label{fig:mojo}
 \end{figure*}
 
 
-\begin{table*}[h!tbp]
-	\caption{Cask summary results}
-	\begin{center}
-		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
-			\hline
-                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
-                  Commit range 1 &  LogN & PL  & PL vs. PLtrunc & Result \\
-                  Commit range 2& ND & PL  & ND & Result \\
-                  Commit range 3& ND  &  PL & ND & Result \\
-                  Commit range 4& ND & PL  & ND & Result \\
-			\hline
+\begin{figure*}[htbp]
+  \centerline{\includegraphics[width=0.95\textwidth]{img/tty_global.eps}}
+  \caption{2-column plot fom tty repository. On the right side an
+    simple plot with the number of lines changed in every commit in
+    front of commit's number is presented. For this particular
+    temporal segment we plot the PDF plot of it, presenting possible
+    distributions fits: Red,power laws; Blue, Log Normal; Green:
+    Poisson}
+  \label{fig:tty}
+\end{figure*}
 
-			\hline
-		\end{tabular}
-	\end{center}
-\label{tab:2019testscask}
-\end{table*}
+\begin{figure*}[htbp]
+  \centerline{\includegraphics[width=0.95\textwidth]{img/rakudo_global_plot.eps}}
+  \caption{2-column plot fom rakudo repository. On the right side an
+    simple plot with the number of lines changed in every commit in
+    front of commit's number is presented. For this particular
+    temporal segment we plot the PDF plot of it, presenting possible
+    distributions fits: Red,power laws; Blue, Log Normal; Green:
+    Poisson}
+  \label{fig:rakudo}
+\end{figure*}
 
-\begin{table*}[h!tbp]
-	\caption{Django summary results}
-	\begin{center}
-		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
-			\hline
-                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
-                  Commit range 1 &  LogN & PL  &PLtrunc & Result \\
-                  Commit range 2&  LogN & PL  &PLtrunc & Result \\
-                  Commit range 3&  LogN & PL  &PLtrunc & Result \\
-                  Commit range 4&  LogN & PL  &PLtrunc & Result \\
-			\hline
-
-			\hline
-		\end{tabular}
-	\end{center}
-\label{tab:2019testsdjango}
-\end{table*}
+\begin{figure*}[htbp]
+  \centerline{\includegraphics[width=0.95\textwidth]{img/django_global_set.eps}}
+  \caption{2-column plot fom Django repository. On the right side an
+    simple plot with the number of lines changed in every commit in
+    front of commit's number is presented. For this particular
+    temporal segment we plot the PDF plot of it, presenting possible
+    distributions fits: Red,power laws; Blue, Log Normal; Green:
+    Poisson }
+  \label{fig:django}
+\end{figure*}
 
 
 \begin{table*}[h!tbp]
-	\caption{Rakudo summary results}
-	\begin{center}
-		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
-			\hline
-                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
-                  Commit range 1 &   LogN & PL  &PLtrunc & Result \\
-                  Commit range 2&  LogN & PL  &PLtrunc & Result \\
-                  Commit range 3&  LogN & PL  &PLtrunc & Result \\
-                  Commit range 4&  LogN & PL  &PLtrunc & Result \\
-			\hline
+  \caption{Cask summary results}
+  \begin{center}
+    \begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} |
+        p{0.08\linewidth} | p{0.1\linewidth} | p{0.1\linewidth}
+         |}
+      \hline
+      Commit range & PL test&PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+      \hline
+      Commit range 1 & 0.53& LogN & PL  & PLtrunc & Moderate \\
+      Commit range 2& 0.078&ND & PL  & ND & Moderate \\
+      Commit range 3& 0.208&ND  &  PL & ND & Moderate \\
+      Commit range 4& 0.086&ND & PL  & ND & Moderate \\
+      \hline
 
-			\hline
-		\end{tabular}
-	\end{center}
-\label{tab:2019testsrakudo}
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{tab:2019testscask}
+\end{table*}
+
+\begin{table*}[h!tbp]
+  \caption{Django summary results}
+  \begin{center}
+    \begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} |
+        p{0.08\linewidth} | p{0.1\linewidth} | p{0.1\linewidth}
+         |}
+      \hline
+      Commit range & PL test & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+      \hline
+      Commit range 1 & 0.0&  LogN & PL  &PLtrunc &  None\\
+      Commit range 2 & 0.118& LogN & PL  &PLtrunc & Truncated \\
+      Commit range 3 &  0.212&LogN & PL  &PLtrunc & Truncated \\
+      Commit range 4 &  0.208&LogN & PL  &PLtrunc & Truncated \\
+      \hline
+
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{tab:2019testsdjango}
 \end{table*}
 
 
 \begin{table*}[h!tbp]
-	\caption{Mojo summary results}
-	\begin{center}
-		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
-			\hline
-                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
-                  Commit range 1 &  ND & PL  & ND & Result \\
-                  Commit range 2& ND & PL  & ND & Result \\
-                  Commit range 3& ND  &  PL & ND & Result \\
-                  Commit range 4& ND & PL  & ND & Result \\
-			\hline
+  \caption{Rakudo summary results}
+  \begin{center}
+    \begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} |
+        p{0.08\linewidth} | p{0.1\linewidth} | p{0.1\linewidth}
+       |}
+      \hline
+      Commit range & PL test & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+      \hline
+      Commit range 1 & 0.0 & LogN & PL  &PLtrunc & None \\
+      Commit range 2&  0.0& LogN & PL  &PLtrunc & None \\
+      Commit range 3&  0.0& LogN & PL  &PLtrunc & None \\
+      Commit range 4& 0.0  &  LogN & PL  &PLtrunc & None \\
+      \hline
 
-			\hline
-		\end{tabular}
-	\end{center}
-\label{tab:2019testsmojo}
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{tab:2019testsrakudo}
 \end{table*}
 
 
 \begin{table*}[h!tbp]
-	\caption{tty summary results}
-	\begin{center}
-		\begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} | p{0.1\linewidth} |p{0.13\linewidth} | p{0.09\linewidth} |}
-			\hline
-                  Commit range & PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
-                  Commit range 1 & ND & ND  & PLtrunc & Result \\
-                  Commit range 2& ND & PL  & ND & Result \\
-                  Commit range 3& ND  &  PL & ND & Result \\
-                  Commit range 4& ND & PL  & ND & Result \\
-			\hline
+  \caption{Mojo summary results}
+  \begin{center}
+    \begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth}  | p{0.08\linewidth} |
+        p{0.08\linewidth} | p{0.1\linewidth} | p{0.1\linewidth}
+       |}
+      \hline
+      Commit range & PL test &PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+      \hline
+      Commit range 1 & 0.21& ND & PL  & ND & Moderate \\
+      Commit range 2& 0.202& ND & PL  & ND & Moderate \\
+      Commit range 3& 0.37& ND  &  PL & ND & Moderate \\
+      Commit range 4&0.566 & ND & PL  & ND & Moderate \\
+      \hline
 
-			\hline
-		\end{tabular}
-	\end{center}
-\label{tab:2019teststty}
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{tab:2019testsmojo}
 \end{table*}
 
+
+\begin{table*}[h!tbp]
+  \caption{tty summary results}
+  \begin{center}
+    \begin{tabular}{| p{0.12\linewidth} | p{0.08\linewidth} | p{0.08\linewidth} |
+        p{0.08\linewidth} | p{0.1\linewidth} | p{0.1\linewidth}|}
+      \hline
+      Commit range & PL test &PL vs. LogN & PL vs. Exp & PL vs. PLtrunc & Result \\
+      \hline
+      Commit range 1 &0.08 &ND & ND  & PLtrunc & Moderate \\
+      Commit range 2& 0.0&ND & PL  & ND & None \\
+      Commit range 3& 0.0&ND  &  PL & ND & None \\
+      Commit range 4& 0.0&ND & PL  & ND & None \\
+      \hline
+
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{tab:2019teststty}
+\end{table*}
 
 % --------------------------------------------------------
 
 
 \section{Conclusions}\label{conc}
---
+Summarizing, our work shows no visible change in the commit distribution. We can address this 
+absence of changes to several factors, but we would like to emphasize two of them: Scale proposed and temporal windows. 
+
+Talking about scale, as it was stated, the small act of choosing one alter or bias our results. As a further development, different scale should be used in this classification, or, if necessary, a new one, with extra details should be created. 
+
+In addition, temporal windows could have been selected in a better way. In most repositories there is some kind of evidence that a power law could be found. This indicates that we have surpassed the initial states were self organization may have not existed. A deeper and more granulated analysis should be made in order to understand the beginning of self organization behaviour. More over as the system could regulate himself, we should reevaluate possible configuration of temporal windows to check if the speed of self-organization don't let us see temporal distribution changes
 
 \section{Acknowledgements}
+\textit{Omitted for submission }
 
-\bibliographystyle{apalike} \bibliography{biblio,geneura}
+\bibliographystyle{apalike} 
+\bibliography{biblio,geneura}
 
 \end{document}
